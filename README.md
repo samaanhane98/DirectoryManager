@@ -2,17 +2,13 @@
 
 Directory File Management Tool Written In Rust
 
-## Build
-
-```bash
-cargo build --release
-```
-
 ## Install
 
 ```bash
 git clone git@github.com:samaanhane98/DirectoryManager.git
 cd DirectoryManager
+
+cargo build --release
 
 mv ./target/release/directory-manager /usr/local/bin/directory-manager
 mv ./Config.toml /usr/local/bin/Config.toml
