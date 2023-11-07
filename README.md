@@ -37,11 +37,11 @@ Cron
 Add directories you want to manage to the program its Config.toml as follows:
 
 ```toml
-[directories.${NAME}]
-config = ${PATH TO DIRECTORY CONFIG}
+[directories.{NAME}]
+config = '{PATH TO DIRECTORY CONFIG}'
 ```
 
-Add the following to a config.toml in the managed directory:
+The following is an example of a config.toml which must be added to the managed directory:
 
 ```
 [extensions]
