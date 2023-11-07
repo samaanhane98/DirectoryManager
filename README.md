@@ -34,14 +34,7 @@ Cron
 
 ## Usage
 
-Add directories you want to manage to the program its Config.toml as follows:
-
-```toml
-[directories.{NAME}]
-config = '{PATH TO DIRECTORY CONFIG}'
-```
-
-The following is an example of a config.toml which must be added to the managed directory:
+The following is an example of a `config.toml` which must be added to the managed directory:
 
 ```
 [extensions]
@@ -50,3 +43,10 @@ png = "Images"
 ```
 
 This will move a file ending in the extension to the corresponding directory. If the directory does not exist the program creates it first.
+
+Add directories you want to manage to the program its `Config.toml` as follows:
+
+```toml
+[directories.{NAME}]
+config = '{PATH TO DIRECTORY CONFIG}'
+```
