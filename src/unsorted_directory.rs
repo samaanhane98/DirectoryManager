@@ -35,7 +35,8 @@ impl UnsortedDirectory {
         let entries = root_path.read_dir()?;
         let files: Rc<[PathBuf]> = entries
             .into_iter()
-            .map(|entry| entry.unwrap().path())
+            .filter_map(|entry| entry.ok().take())
+            .map(|dir| dir.path())
             .filter(|path| path.is_file() && !path.ends_with("config.toml"))
             .collect();
 

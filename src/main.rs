@@ -12,7 +12,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let directories = base_config
         .get("directories")
         .and_then(|conf| conf.as_table())
-        .unwrap();
+        .ok_or("Config directories could not be determined")?;
 
     for (_, map) in directories.into_iter() {
         let Some(config_path) = map.get("config").and_then(|val| val.as_str()) else {
